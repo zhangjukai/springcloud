@@ -20,6 +20,8 @@ public class AccessFilter extends ZuulFilter{
             log.warn("access token is empty");
             ctx.setSendZuulResponse(false);
             ctx.setResponseStatusCode(401);
+            ctx.getResponse().setCharacterEncoding("UTF-8");
+            ctx.setResponseBody("你没有权限访问该接口！");
             return null;
         }
         log.info("access token ok");
@@ -28,7 +30,7 @@ public class AccessFilter extends ZuulFilter{
 
 	@Override
 	public boolean shouldFilter() {
-		return false;
+		return true;
 	}
 
 	@Override
