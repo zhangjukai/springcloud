@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 @EnableDiscoveryClient
 public class Application {
-	@Value("${spring.datasource.type}")
+	@Value("${serviceId}")
 	private String value;
 	
 	public static void main(String[] args) {

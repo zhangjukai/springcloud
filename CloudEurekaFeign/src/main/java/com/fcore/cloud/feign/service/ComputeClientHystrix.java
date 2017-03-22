@@ -1,4 +1,4 @@
-package com.fcore.cloud.feign.service;
+/*package com.fcore.cloud.feign.service;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,3 +12,4 @@ public class ComputeClientHystrix implements ComputeClient {
     }
 
 }
+*/
