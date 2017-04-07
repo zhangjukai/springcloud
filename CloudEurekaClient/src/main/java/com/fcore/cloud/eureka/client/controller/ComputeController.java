@@ -17,16 +17,10 @@ public class ComputeController {
 
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public Integer add(@RequestParam Integer a, @RequestParam Integer b) {
-		ServiceInstance instance = client.getLocalServiceInstance();
+		//ServiceInstance instance = client.getLocalServiceInstance();
 		Integer r = a + b;
-		logger.info("2222/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r);
-		return r;
-	}
-	@RequestMapping(value = "/sub", method = RequestMethod.GET)
-	public Integer subtraction(@RequestParam Integer a, @RequestParam Integer b) {
-		ServiceInstance instance = client.getLocalServiceInstance();
-		Integer r = a + b;
-		logger.info("/sub, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r);
+	//	logger.info("2222/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r);
 		return r;
 	}
 }
+ 

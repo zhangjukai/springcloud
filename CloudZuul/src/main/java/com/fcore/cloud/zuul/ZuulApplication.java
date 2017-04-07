@@ -1,9 +1,5 @@
 package com.fcore.cloud.zuul;
 
-import javax.annotation.PostConstruct;
-
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -22,7 +18,6 @@ import com.fcore.cloud.zuul.filter.AccessFilter;
 @EnableZuulProxy
 @RefreshScope
 @RestController
-@EnableAutoConfiguration
 public class ZuulApplication {
 	public static void main(String[] args) {
 		new SpringApplicationBuilder(ZuulApplication.class).web(true).run(args);
@@ -31,5 +26,4 @@ public class ZuulApplication {
 	public AccessFilter accessFilter() {
 		return new AccessFilter();
 	}
-	
 }
